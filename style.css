@@ -1,0 +1,440 @@
+/* === GLOBAL STYLES & RESETS === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #f4f4f4; /* Slightly darker grey than before, closer to original's surrounding area */
+    color: #1c1c1e; /* Default text color, slightly off-black */
+    line-height: 1.6;
+    font-size: 16px; /* Base font size */
+}
+
+.page-wrapper {
+    width: 100%;
+}
+
+/* === SITE HEADER (Top Bar) === */
+.site-header {
+    background-color: #ffffff; /* White background for header bar */
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaeb; /* Subtle border */
+    margin-bottom: 30px; /* Space between header and main content */
+}
+
+.header-content {
+    max-width: 680px; /* Align with main-container or slightly wider */
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-icons span {
+    font-size: 1.1em; /* Adjust as needed for your icons */
+    color: #5f5f61;
+    margin-right: 15px; /* Space between icons */
+}
+.header-icons span:last-child {
+    margin-right: 0;
+}
+
+.button.header-hire-button { /* Specific styling for the header button */
+    padding: 6px 14px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border-radius: 16px; /* More pill-shaped */
+}
+
+
+/* === MAIN CONTAINER === */
+.main-container {
+    max-width: 640px; /* Slightly narrower than before to match original better */
+    margin: 0 auto 40px auto; /* 0 top margin as site-header provides space */
+    padding: 25px; /* Adjust padding as needed */
+    background-color: #ffffff;
+    border-radius: 10px; /* Slightly more pronounced radius */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07); /* Refined shadow */
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3 {
+    color: #1c1c1e;
+    margin-bottom: 0.65em; /* Slightly tighter bottom margin */
+    line-height: 1.25;
+    font-weight: 600; /* Consistent bold weight for headings */
+}
+
+h1 {
+    font-size: 1.8em; /* Approx 28-30px, closer to original */
+}
+
+h2 {
+    font-size: 1.1em; /* Approx 18px, was too large before */
+    font-weight: 500; /* Medium weight for section titles */
+    color: #8e8e93;  /* Grey color for section titles */
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0; /* Remove border from previous style */
+    border-bottom: none;
+    text-transform: uppercase; /* As seen in original */
+    letter-spacing: 0.05em; /* Slight letter spacing */
+}
+
+h3 { /* For item titles within lists */
+    font-size: 1em; /* Approx 16px */
+    font-weight: 500; /* Medium weight */
+    color: #1c1c1e;
+}
+
+p {
+    margin-bottom: 1.2em; /* More space after paragraphs */
+    color: #3c3c3e;
+    font-size: 0.95em; /* Approx 15px */
+}
+
+a {
+    color: #007aff; /* iOS-like blue */
+    text-decoration: none;
+}
+a:hover {
+    /* text-decoration: underline; */ /* Original doesn't seem to underline links on hover much */
+    opacity: 0.8;
+}
+
+/* === INTRO SECTION === */
+.intro-section {
+    text-align: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0; /* Lighter border */
+}
+
+.profile-header {
+    position: relative; /* For positioning the status badge */
+    display: inline-block; /* To keep it centered and allow badge positioning */
+    margin-bottom: 15px;
+}
+
+.intro-section .profile-pic {
+    width: 80px; /* Smaller profile pic, closer to original */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block; /* Removes extra space below image */
+    margin-left: auto;
+    margin-right: auto;
+    /* border: none; Remove previous border */
+    /* box-shadow: none; Remove previous shadow */
+}
+
+.intro-section .status {
+    display: inline-block;
+    background-color: #eef7ff; /* Light blue, closer to original's tag look */
+    color: #007aff;
+    padding: 3px 10px;
+    border-radius: 12px; /* Pill shape */
+    font-size: 0.7em; /* Smaller text */
+    font-weight: 500;
+    /* border: 1px solid #d0eaff; /* Optional subtle border */
+    margin-top: 8px; /* Space from the image if it were below */
+    /* To position it like the original (slightly offset from pic center): */
+    /* position: absolute; */
+    /* bottom: 5px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* Or adjust based on your actual emoji/image if it has whitespace */
+}
+
+.intro-section h1 {
+    margin-bottom: 0.3em;
+}
+
+.intro-section p {
+    font-size: 0.95em; /* Consistent with other p tags */
+    color: #3c3c3e;
+    max-width: 100%; /* Allow it to fill container */
+}
+
+.intro-cta-buttons { /* Specific class for intro buttons if different from others */
+    margin-top: 20px;
+}
+
+/* === BUTTONS === */
+.button {
+    display: inline-flex; /* For aligning text and potential icons */
+    align-items: center;
+    justify-content: center;
+    padding: 9px 18px; /* Adjusted padding */
+    border-radius: 20px; /* More pill-shaped */
+    font-weight: 500; /* Medium weight */
+    text-align: center;
+    transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.1s ease;
+    border: none; /* Original buttons are borderless */
+    font-size: 0.9em; /* Slightly smaller button text */
+    line-height: 1.2; /* Ensure text is vertically centered */
+}
+
+.button:hover {
+    text-decoration: none;
+    opacity: 0.85;
+}
+.button:active {
+    transform: scale(0.98); /* Slight press effect */
+}
+
+.button.primary {
+    background-color: #007aff; /* iOS blue for primary action */
+    color: #ffffff;
+}
+
+.button.secondary {
+    background-color: #e5e5ea; /* Light grey, iOS-like */
+    color: #007aff; /* Blue text on grey background */
+}
+
+/* === LIST SECTIONS (Projects, Products) === */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em; /* Space between header and list */
+}
+.section-header h2 { /* Override general h2 margins specifically for this context */
+    margin-top: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+.list-section {
+    margin-bottom: 25px;
+}
+
+.list-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-section li {
+    margin-bottom: 0; /* Remove bottom margin, rely on border or padding */
+    background-color: transparent; /* List items themselves are transparent */
+    border: none; /* Remove outer border */
+    border-radius: 0; /* No border radius on li itself */
+    transition: background-color 0.2s ease;
+}
+
+.list-section li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 0; /* Padding top/bottom, no side padding on link itself */
+    color: #1c1c1e;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0; /* Subtle divider */
+}
+.list-section li:last-child a {
+    border-bottom: none; /* No border for the last item */
+}
+.list-section li a:hover {
+    background-color: #f9f9f9; /* Slight hover effect on the link area */
+}
+
+.item-icon {
+    width: 32px; /* Slightly smaller icons */
+    height: 32px;
+    object-fit: contain;
+    margin-right: 12px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.item-text {
+    flex-grow: 1;
+}
+
+.item-text h3 {
+    margin-bottom: 0.1em;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.item-text p {
+    font-size: 0.85em; /* Smaller descriptive text */
+    color: #8e8e93; /* Grey color */
+    margin-bottom: 0;
+}
+
+.tag-highlight {
+    display: inline-block;
+    background-color: #f0f0f0; /* Light grey for tag background */
+    color: #555; /* Darker grey for tag text */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.list-item-arrow {
+    margin-left: 10px; /* Pushes arrow to the right */
+    color: #c7c7cc; /* Light grey arrow */
+    font-size: 1em;
+}
+
+.view-all { /* Part of .section-header */
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #007aff;
+}
+
+/* === CTA SECTION ("Let's work together") === */
+.cta-section {
+    text-align: center;
+    padding: 25px 15px; /* Adjusted padding */
+    background-color: #f9f9f9; /* Slightly off-white, less grey than body */
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.cta-section h2 {
+    border-bottom: none;
+    margin-top: 0;
+    font-size: 1.4em; /* Specific size for this heading */
+    font-weight: 600;
+    color: #1c1c1e;
+    text-transform: none; /* No uppercase for this one */
+    letter-spacing: 0;
+}
+.cta-section p {
+    max-width: 100%;
+    font-size: 0.95em;
+    color: #3c3c3e;
+}
+
+/* === FOLLOW ME SECTION === */
+.follow-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.follow-section h2 {
+    border-bottom: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8e8e93;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* More space between social icons */
+    margin-top: 5px;
+}
+
+.social-links a {
+    font-size: 0.9em; /* Text based social links */
+    font-weight: 500;
+    color: #007aff; /* Links are blue */
+    padding: 5px;
+}
+.social-links a:hover {
+    opacity: 0.7;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 25px;
+    border-top: 1px solid #f0f0f0; /* Lighter border */
+    font-size: 0.8em;
+    color: #8e8e93; /* Grey color for footer text */
+}
+.subtle-folio-credit, .subtle-folio-credit a {
+    font-size: 0.9em; /* Slightly larger than copyright */
+    color: #aeaeb2; /* Even lighter grey */
+    margin-top: 5px;
+}
+.subtle-folio-credit a:hover {
+    color: #007aff;
+    opacity: 1;
+}
+
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 720px) { /* Adjust breakpoint for main container */
+    .site-header {
+        margin-bottom: 20px;
+    }
+    .header-content {
+        max-width: 100%;
+        padding: 0 20px; /* Consistent padding with main content on mobile */
+    }
+    .main-container {
+        margin: 0 15px 30px 15px; /* Side margins */
+        padding: 20px;
+        border-radius: 8px; /* Keep radius on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; /* Adjust base font slightly */
+    }
+    .main-container {
+        margin: 0 0 20px 0; /* Full width for main container */
+        padding: 20px 15px; /* Adjust padding */
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .site-header {
+        margin-bottom: 0;
+        border-bottom: 1px solid #eaeaeb; /* Ensure header border is visible if main container has no top margin */
+    }
+    .header-content {
+        padding: 0 15px;
+    }
+
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1em; } /* Smaller section titles on mobile */
+    .item-text h3 { font-size: 0.95em; }
+
+    .intro-section .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+    .intro-section .status {
+        font-size: 0.65em;
+        padding: 2px 8px;
+    }
+
+    .button {
+        font-size: 0.85em;
+        padding: 8px 16px;
+    }
+    .header-hire-button {
+        font-size: 0.8em;
+        padding: 5px 12px;
+    }
+
+    .cta-buttons { /* In intro and main CTA */
+        flex-direction: column;
+        align-items: stretch; /* Make buttons full width of their container */
+        gap: 8px;
+    }
+    .button { /* When stacked */
+        width: 100%;
+    }
+
+    .list-section li a {
+        padding: 10px 0;
+    }
+    .item-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
+}
